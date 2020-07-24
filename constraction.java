@@ -14,7 +14,7 @@ public class Construction {
     double cost_calculation()
     {
         if(fully==false)
-        {   
+        {   System.out.println("if block starts");
             if(material.equals("standard"))
             {
                 total_cost=1200*area;

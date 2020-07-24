@@ -1,21 +1,21 @@
 public class Interest {
-    double principal,time,rate;
-     Interest(double principal)
-     {
-         this.principal=principal;
-     }
+    double p,t,r;
+    Interest(double principal)
+    {
+        this.p=principal;
+    }
 }
 class Simple extends Interest
 {
     Simple(double principal,double time,double rate)
     {
         super(principal);
-        this.time=time;
-        this.rate=rate;
+        this.t=time;
+        this.r=rate;
     }
     double Calculate()
     {
-        return (this.principal*this.time*this.rate)/100;
+        return (this.p*this.t*this.r)/100;
     }
 }
 class Compound extends Simple
@@ -26,6 +26,6 @@ class Compound extends Simple
     }
     double Calculate()
     {
-        return principal+Math.pow((1+rate),time);
+        return p+Math.pow((1+r),t);
     }
 }
